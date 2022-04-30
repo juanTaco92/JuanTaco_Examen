@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="JuanTaco.Resumen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="RESUMEN" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="Bienvenido Usuario: " HorizontalTextAlignment="End"></Label>
+            <Label x:Name="lblUser" TextColor="BurlyWood" HorizontalTextAlignment="End"/>
+            <Label Text="Su contraseña es: " HorizontalTextAlignment="End"/>
+            <Label x:Name="lblPass" TextColor="BurlyWood" HorizontalTextAlignment="End"/>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

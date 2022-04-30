@@ -12,11 +12,13 @@ namespace JuanTaco
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Resumen : ContentPage
     {
-        public Resumen(String usuario, string password)
+        public Resumen(String usuario, String password, String nombres, double datoTotPagar)
         {
             InitializeComponent();
             lblUser.Text = usuario;
             lblPass.Text = password;
+            lblNombres = nombres;
+            lblTotalPagar = datoTotPagar;
         }
     }
 }

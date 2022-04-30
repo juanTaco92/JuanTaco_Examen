@@ -27,9 +27,8 @@ namespace JuanTaco
                     Decimal cuotaInicial = Decimal.Parse(txtCuotaInicial.Text);
                     if (cuotaInicial <= 3000)
                     {
-                        double cuotaInicial1 = Convert.ToDouble(txtCuotaInicial.Text);
                         string nombres = txtNombres.Text;
-                        double datoResultadoTotal = (3000 - cuotaInicial1) + (3000 * 0.5);
+                        double cuotaInicial1 = Convert.ToDouble(txtCuotaInicial.Text);                        
                         double datoSubCuota = (3000 - cuotaInicial1);
                         double datoInteres = (3000 * 0.5);
                         double datoTotCuota = (datoSubCuota+datoInteres)/5 ;
@@ -58,11 +57,13 @@ namespace JuanTaco
             String datoResultadoTotal1 = Convert.ToString(cuotaInicial);
             double datoSubCuota = (3000 - cuotaInicial);
             double datoInteres = (3000 * 0.5);
+            double datoTotPagar = (datoSubCuota + datoInteres)
             double datoTotCuota = (datoSubCuota + datoInteres) / 5;
-            txtResultado.Text = datoTotCuota.ToString();
-            DisplayAlert("Mensaje", "Dato Ingresado Correctamente", "Cerrar");
             
-            await Navigation.PushAsync(new Resumen(nombres, datoResultadoTotal1));
+            DisplayAlert("Mensaje", "Dato Ingresado Correctamente", "Cerrar");
+            string user = lblUser.Text;
+            string pass = lblPass.Text;
+            await Navigation.PushAsync(new Resumen(nombres, datoTotPagar,user,pass));
         }
     }
 }

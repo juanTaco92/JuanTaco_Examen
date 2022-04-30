@@ -12,7 +12,27 @@
             <Label Text="Su contraseña es: " HorizontalTextAlignment="End"/>
             <Label x:Name="lblPass" TextColor="BurlyWood" HorizontalTextAlignment="End"/>
             
-            
+            <Label Text="Detalle de PAgo"  FontSize="20" TextColor="Brown"></Label>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                       
+                        
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Grid.Column="0" Grid.Row="0" Text="Nombres" VerticalTextAlignment="End"></Label>
+                    <Label Grid.Column="1" Grid.Row="0" x:Name="lblNombres" />
+
+                    <Label Grid.Column="0" Grid.Row="1" Text="Total a Pagar" VerticalTextAlignment="End"></Label>
+                    <Label Grid.Column="1" Grid.Row="1" x:Name="lblTotalPagar" />
+
+                     </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
